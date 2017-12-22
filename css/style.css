@@ -95,12 +95,12 @@ a:not([href]) {
 .longread-main {
   width: 1170px;
   margin: 0 auto;
-  padding: 100px 60px;
+  padding: 100px 100px;
   background-color: #ffffff;
 }
 
 .longread-text {
-  padding: 15px 110px;
+  padding: 15px 70px;
   font-size: 16px;
   line-height: 26px;
   color: #6d6d6d;
@@ -122,7 +122,7 @@ a:not([href]) {
 .longread-letter {
   float: left;
   position: relative;
-  margin: 0 25px 0 110px;
+  margin: 0 25px 0 70px;
   font-family: 'Roboto', 'sans-serif';
   font-size: 120px;
   color: #000000;
@@ -229,12 +229,12 @@ a:not([href]) {
 
 .longread-blockquote-wrapper-right {
   float: right;
-  margin: 20px 100px 20px 45px;
+  margin: 20px 60px 20px 45px;
 }
 
 .longread-blockquote-wrapper-left {
   float: left;
-  margin: 20px 45px 20px 110px;
+  margin: 20px 45px 20px 70px;
 }
 
 .longread-blockquote-wrapper:before {
@@ -268,13 +268,13 @@ a:not([href]) {
 
 .longread-document-wrapper-right {
   float: right;
-  margin: 20px 100px 20px 45px;
+  margin: 20px 60px 20px 45px;
   padding: 25px 0px 25px 30px;
 }
 
 .longread-document-wrapper-left {
   float: left;
-  margin: 20px 45px 20px 110px;
+  margin: 20px 45px 20px 70px;
   padding: 25px 30px 25px 0;
 }
 
@@ -288,6 +288,7 @@ a:not([href]) {
   position: absolute;
   width: 33px;
   height: 50px;
+  box-shadow: 2px 2px 0 0 #e6e9ec;
   background-color: #ffffff;
   background-image: url('../img/clip-icon.svg');
   background-position: center;
@@ -328,4 +329,53 @@ a:not([href]) {
 
 .longread-document-wrapper-left .longread-document {
   margin-left: -110px;
+}
+
+/* Блок "справка" */
+
+.longread-info-block {
+  display: flex;
+  width: 520px;
+  padding: 35px;
+  background-color: #f7f4e9;
+}
+
+.longread-info-block-photo {
+  flex-shrink: 0;
+  width: 125px;
+  height: 160px;
+}
+
+.longread-info-block-content {
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0 0 0 30px;
+}
+
+.longread-info-block-top {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.34);
+}
+
+.longread-info-block-title {
+  position: relative;
+  padding: 15px 0;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  color: #000000;
+  font-weight: 900;
+}
+
+.longread-info-block-title:after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  background-color: #5c96de;
+}
+
+.longread-info-block-text {
+  color: #6d6d6d;
 }
