@@ -469,5 +469,48 @@ a:not([href]) {
 .longread-rfsshop {
   width: 266px;
   height: 416px;
+  padding: 0 35px;
+  background: url('../img/rfs-shop-background.png') center no-repeat;
 }
+
+.longread-rfsshop-photo {
+  width: 195px;
+  height: 245px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 6px 6px rgba(36, 72, 93, 0.2);
+}
+
+.longread-rfsshop-top {
+  font-size: 16px;
+  line-height: 46px;
+  font-weight: 900;
+  color: #3172c2;
+  text-transform: uppercase;
+}
+
+.longread-rfsshop-text {
+  padding: 15px 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.longread-rfsshop-price {
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* Блок "Видео" */
+
+.longread-video {
+  margin: 30px 0;
+  padding: 0 70px;
+  width: 970px;
+  height: 450px;
+}
+
+
+
 
