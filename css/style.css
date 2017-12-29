@@ -698,3 +698,140 @@ a:not([href]) {
 }
 
 /* Блок "Слайдер фото" */
+
+.longread-slider {
+  margin: 20px 0;
+}
+
+.longread-slider-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+.longread-slider-top-wrapper {
+  position: relative;
+}
+
+.longread-slider-arrow {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+}
+
+.longread-slider-arrow-back:before {
+  display: block;
+  padding: 15px 10px;
+  content: "\f053";
+  color: #ffffff;
+  font-family: "FontAwesome";
+  font-size: 19px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.longread-slider-arrow-forward {
+  right: 0;
+}
+
+.longread-slider-arrow-forward:before {
+  display: block;
+  padding: 15px 10px;
+  content: "\f054";
+  color: #ffffff;
+  font-family: "FontAwesome";
+  font-size: 19px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.longread-slider-slides {
+  display: flex;
+  width: 978px;
+  height: 569px;
+  overflow: hidden;
+  list-style: none;
+}
+
+.longread-slider-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0 489px rgba(0, 0, 0, 0.3) inset;
+}
+
+.longread-slider .longread-blockquote-text {
+  color: #ffffff;
+  text-align: center;
+}
+
+.longread-slider .longread-blockquote {
+  width: 500px;
+}
+
+.longread-slider-socials-list {
+  width: 37px;
+  list-style: none;
+  box-shadow: 1px 1px 1px 1px #e1e1e1;
+}
+
+.longread-slider-socials-item {
+  margin: 10px auto 10px auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #828282;
+}
+
+.longread-slider-socials-share {
+  position: relative;
+  width: 100%;
+  height: 33px;
+}
+
+.longread-slider-socials-share:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -12px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/share-icon-dark.svg");
+}
+
+.longread-slider-bottom {
+  display: flex;
+  margin: 15px 0 0 0;
+}
+
+.longread-slider-pagination {
+  display: flex;
+  margin: 0 10px 0 0;
+  font-size: 12px;
+  line-height: 12px;
+  color: #5c96de;
+}
+
+.longread-slider-pagination-current {
+  position: relative;
+  padding: 0 13px 0 0;
+}
+
+.longread-slider-pagination-current:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 6px;
+  width: 1px;
+  height: 11px;
+  transform: skew(-25deg);
+  background-color: #5c96de;
+}
+
+.longread-slider-description {
+  font-size: 11px;
+  line-height: 12px;
+  color: rgba(109, 109, 109, 0.6);
+}
