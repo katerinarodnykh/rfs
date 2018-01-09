@@ -136,7 +136,7 @@ a:not([href]) {
 
 .longread-top {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   min-width: 1232px;
   height: 800px;
   margin: 0 auto;
@@ -154,14 +154,14 @@ a:not([href]) {
 .longread-top-content {
   display: flex;
   align-items: flex-end;
-  width: 1232px;
+  width: 1170px;
   height: 800px;
   margin: 0 auto;
   padding: 0 20px 25px 20px;
 }
 
 .longread-top-content-left {
-  width: 725px;
+  width: 65%;
 }
 
 .longread-top-title {
@@ -226,7 +226,7 @@ a:not([href]) {
 }
 
 .longread-top-content-right {
-  width: 467px;
+  width: 35%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -262,22 +262,26 @@ a:not([href]) {
   font-style: italic;
 }
 
-.longread-top-socials {
-}
 
-.longread-top-socials-list {
+.longread-socials-list {
   display: flex;
   justify-content: flex-end;
   list-style: none;
   margin: 65px 0 0 0;
 }
 
-.longread-top-socials-item {
+.longread-socials-item {
   width: 38px;
   height: 38px;
   border-radius: 50%;
   margin-left: 20px;
   background-color: #828282;
+}
+
+.longread-socials-item-link {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /* Первая буква в тексте */
@@ -853,6 +857,8 @@ a:not([href]) {
 /* Блок "Ссылки по теме" */
 
 .longread-links {
+  position: relative;
+  z-index: 2;
   width: 100%;
   padding: 25px 100px 100px 100px;
   background-color: #f3f3f3;
@@ -893,3 +899,67 @@ a:not([href]) {
   font-weight: 500;
   color: #000000;
 }
+
+/* Блок "Скролл" */
+
+.longread-scroll {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  bottom: 170px;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #507093;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.longread-scroll-left {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  background-color: #fffffd;
+  text-align: right;
+}
+
+.longread-scroll-left:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 90px solid transparent;
+  border-right: 35px solid #507093;
+}
+
+.longread-scroll-rfs-logo {
+  margin: 18px 50px 0 0;
+}
+
+.longread-scroll-right {
+}
+
+.longread-scroll-right-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 945px;
+  height: 100%;
+}
+
+.longread-scroll-right .longread-socials-list {
+  margin: 0;
+}
+
+.longread-scroll-right .longread-socials-item {
+  background-color: #a8b8c9;
+}
+
+.longread-scroll-title {
+  padding: 0 0 0 25px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
