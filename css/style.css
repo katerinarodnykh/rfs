@@ -107,9 +107,20 @@ a:not([href]) {
 }
 
 .longread-main {
+  position: relative;
   margin: 0 auto;
   padding: 100px 100px;
   background-color: #ffffff;
+}
+
+.ya-share2 {
+  position: absolute;
+  top: 25px;
+  right: 55px;
+  display: flex;
+  justify-content: flex-end;
+  filter: grayscale(100%);
+  opacity: 0.5;
 }
 
 .longread-text {
@@ -936,9 +947,6 @@ a:not([href]) {
   margin: 18px 50px 0 0;
 }
 
-.longread-scroll-right {
-}
-
 .longread-scroll-right-wrapper {
   display: flex;
   align-items: center;
@@ -962,4 +970,5 @@ a:not([href]) {
   font-weight: 500;
   color: #ffffff;
 }
+
 
