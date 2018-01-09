@@ -99,6 +99,7 @@ a:not([href]) {
 }
 
 .main {
+  margin: 0 auto;
   width: 1232px;
   padding: 0 31px;
   box-sizing: border-box;
@@ -423,9 +424,13 @@ a:not([href]) {
 
 .longread-photo {
   width: 100%;
+  padding: 0 0 40px 0;
+  position: relative;
 }
 
 .longread-photo-caption {
+  position: absolute;
+  width: 100%;
   padding-top: 5px;
   font-size: 11px;
   line-height: 17px;
