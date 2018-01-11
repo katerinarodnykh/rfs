@@ -113,16 +113,6 @@ a:not([href]) {
   background-color: #ffffff;
 }
 
-.ya-share2 {
-  position: absolute;
-  top: 25px;
-  right: 55px;
-  display: flex;
-  justify-content: flex-end;
-  filter: grayscale(100%);
-  opacity: 0.5;
-}
-
 .longread-text {
   padding: 15px 70px;
   font-size: 16px;
@@ -922,14 +912,19 @@ a:not([href]) {
 
 .longread-scroll {
   display: flex;
-  position: fixed;
+  position: sticky;
   z-index: 1;
-  bottom: 170px;
+  top: 0px;
   left: 0;
+  margin-top: -100px;
   width: 100%;
   height: 90px;
   background-color: #507093;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.longread-scroll-wrapper {
+  position: relative;
 }
 
 .longread-scroll-left {
@@ -951,14 +946,15 @@ a:not([href]) {
 }
 
 .longread-scroll-rfs-logo {
-  margin: 18px 50px 0 0;
+  margin: 13px 60px 0 0;
 }
 
 .longread-scroll-right-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 945px;
+  padding: 0 20px 0 0;
+  width: 965px;
   height: 100%;
 }
 
@@ -976,6 +972,19 @@ a:not([href]) {
   line-height: 20px;
   font-weight: 500;
   color: #ffffff;
+}
+
+.longread-progress-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+.longread-progress {
+  height: 3px;
+  background-color: #fe4817;
 }
 
 
