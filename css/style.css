@@ -137,7 +137,7 @@ a:not([href]) {
 
 .longread-top {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   min-width: 1232px;
   height: 800px;
   margin: 0 auto;
@@ -336,9 +336,13 @@ a:not([href]) {
 
 .longread-blockquote {
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .longread-blockquote-text {
+  margin: 0 0 20px 0;
   position: relative;
   font-size: 26px;
   line-height: 32px;
@@ -401,7 +405,7 @@ a:not([href]) {
   position: relative;
   width: 310px;
   height: auto;
-  padding: 35px 30px 60px 0;
+  padding: 35px 30px 10px 0;
   background-color: #f3f5f7;
 }
 
@@ -415,14 +419,22 @@ a:not([href]) {
   margin: 20px 45px 20px 70px;
 }
 
-.longread-blockquote-wrapper:before {
-  content: '';
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  width: 25px;
-  height: 25px;
-  background-image: url("../img/share-icon.svg");
+/* Блок соц. сетей в цитате */
+
+.longread-blockquote .longread-socials-small {
+  margin: 0 -10px 0 0;
+}
+
+.longread-blockquote-wrapper-right .longread-blockquote .longread-socials-small {
+  margin: 0 100px 0 0;
+}
+
+.longread-blockquote .longread-socials-small:hover .longread-socials-small-list {
+  box-shadow: none;
+}
+
+.longread-blockquote .longread-socials-small:hover .longread-share-trigger {
+  box-shadow: none;
 }
 
 /* Блок "Фото" */
@@ -465,6 +477,7 @@ a:not([href]) {
 }
 
 .longread-document {
+  display: block;
   position: relative;
   width: 350px;
 }
@@ -500,6 +513,7 @@ a:not([href]) {
 .longread-document-title {
   padding: 5px 0 0 0;
   font-weight: 900;
+  color: #000000;
 }
 
 .longread-document-name {
@@ -692,9 +706,114 @@ a:not([href]) {
   height: 495px;
 }
 
+/* Блок "Поделиться, маленькие иконки соц. сетей" */
+
+.longread-socials-small {
+  flex-shrink: 0;
+  width: 42px;
+  height: 37px;
+  position: relative;
+  z-index: 1;
+}
+
+/*.longread-socials-small:hover {
+  width: auto !important;
+}*/
+
+.longread-socials-small:hover .longread-socials-small-list {
+  transform: translateX(-100%);
+  box-shadow: -1px 1px 0px 1px #e1e1e1;
+}
+
+.longread-socials-small:hover .longread-socials-small-item {
+  transition: background-color 350ms ease-out;
+  background-color: #828282;
+}
+
+.longread-socials-small:hover .longread-share-trigger {
+  box-shadow: 1px 1px 0px 1px #e1e1e1;
+}
+
+.longread-socials-small:hover .longread-share-trigger:before {
+  background-image: url("../img/share-icon-dark.svg");
+}
+
+.longread-share-trigger {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.longread-share-trigger:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+  right: 50%;
+  margin-right: -12px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/share-icon.svg");
+}
+
+.longread-socials-small-list {
+  position: absolute;
+  top: 0;
+  right: -89px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  height: 37px;
+  padding: 0 3px 0 0;
+  transition: transform 350ms ease-out;
+  z-index: 1;
+  transform: translateX(-71%);
+}
+
+.longread-socials-small-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin-left: 10px;
+  /*transition: background-color 350ms ease-out;*/
+}
+
+.longread-socials-small-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.socials-icon-svg {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+}
+
+.longread-socials-small:hover .socials-icon-svg-vk {
+  fill: white;
+}
+
+/*.socials-icon-svg-vk {
+  background-image: url('../img/socials-icon-svg-vk.svg')
+}*/
+
 /* Блок "Протокол матча" */
 
 .longread-match-protocol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   position: relative;
   padding: 0 0 55px 0;
   width: 460px;
@@ -703,16 +822,6 @@ a:not([href]) {
 
 .longread-match-protocol-wrapper {
   display: block;
-}
-
-.longread-match-protocol:before {
-  content: '';
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  width: 25px;
-  height: 25px;
-  background-image: url("../img/share-icon.svg");
 }
 
 /* Блок "Слайдер фото" */
@@ -788,43 +897,24 @@ a:not([href]) {
   width: 500px;
 }
 
-.longread-slider-socials-list {
-  flex-shrink: 0;
-  width: 37px;
-  list-style: none;
-  box-shadow: 1px 1px 1px 1px #e1e1e1;
-}
+/* Соц. сети в блоке слайдера */
 
-.longread-slider-socials-item {
-  margin: 10px auto 10px auto;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background-color: #828282;
-}
-
-.longread-slider-socials-share {
-  position: relative;
-  width: 100%;
-  height: 33px;
-}
-
-.longread-slider-socials-item-link {
-  position: relative;
+.longread-slider .longread-socials-small-list {
   display: block;
-  width: 100%;
-  height: 100%;
+  height: auto;
+  width: 42px;
+  right: 0px;
+  padding: 0 0 3px 0;
+  transform: translateY(-71%);
 }
 
-.longread-slider-socials-share .longread-slider-socials-item-link:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -12px;
-  width: 24px;
-  height: 24px;
-  background-image: url("../img/share-icon-dark.svg");
+.longread-slider .longread-socials-small-item {
+  margin: 10px auto 0 auto;
+}
+
+.longread-slider .longread-socials-small:hover .longread-socials-small-list {
+  transform: translateY(-100%);
+  box-shadow: 1px -1px 0px 1px #e1e1e1;
 }
 
 .longread-slider-bottom {
@@ -913,7 +1003,7 @@ a:not([href]) {
 .longread-scroll {
   display: flex;
   position: sticky;
-  z-index: 1;
+  z-index: 3;
   top: 0px;
   left: 0;
   margin-top: -100px;
