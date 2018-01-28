@@ -335,7 +335,6 @@ a:not([href]) {
 /* Блок "Цитата" */
 
 .longread-blockquote {
-  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -355,10 +354,6 @@ a:not([href]) {
 
 .longread-blockquote-wrapper-right .longread-blockquote-text {
   padding-left: 30px;
-}
-
-.longread-blockquote-wrapper-left .longread-blockquote {
-  margin-left: -120px;
 }
 
 /*.longread-blockquote-text:before {
@@ -403,30 +398,27 @@ a:not([href]) {
 
 .longread-blockquote-wrapper {
   position: relative;
-  width: 310px;
+  width: 400px;
   height: auto;
-  padding: 35px 30px 10px 0;
   background-color: #f3f5f7;
 }
 
 .longread-blockquote-wrapper-right {
   float: right;
-  margin: 20px 60px 20px 45px;
+  padding: 35px 30px 10px 0px;
+  margin: 20px 0px 20px 45px;
 }
 
 .longread-blockquote-wrapper-left {
   float: left;
-  margin: 20px 45px 20px 70px;
+  padding: 35px 30px 10px 30px;
+  margin: 20px 45px 20px 0px;
 }
 
 /* Блок соц. сетей в цитате */
 
 .longread-blockquote .longread-socials-small {
   margin: 0 -10px 0 0;
-}
-
-.longread-blockquote-wrapper-right .longread-blockquote .longread-socials-small {
-  margin: 0 100px 0 0;
 }
 
 .longread-blockquote .longread-socials-small:hover .longread-socials-small-list {
@@ -459,27 +451,26 @@ a:not([href]) {
 
 .longread-document-wrapper {
   position: relative;
-  width: 270px;
+  width: 300px;
   height: auto;
   background-color: #f3f5f7;
 }
 
 .longread-document-wrapper-right {
   float: right;
-  margin: 20px 60px 20px 45px;
-  padding: 25px 0px 25px 30px;
+  margin: 20px 0px 20px 45px;
+  padding: 25px 10px 25px 30px;
 }
 
 .longread-document-wrapper-left {
   float: left;
-  margin: 20px 45px 20px 70px;
-  padding: 25px 30px 25px 0;
+  margin: 20px 45px 20px 0px;
+  padding: 25px 30px 25px 10px;
 }
 
 .longread-document {
   display: block;
   position: relative;
-  width: 350px;
 }
 
 .longread-document:before {
@@ -516,19 +507,15 @@ a:not([href]) {
   color: #000000;
 }
 
-.longread-document-name {
+.longread-document-date {
   font-size: 12px;
-  line-height: 20px;
+  line-height: 30px;
   color: rgba(0, 0, 0, 0.4);
 }
 
 .longread-document-wrapper-left .longread-document-title,
-.longread-document-wrapper-left .longread-document-name {
+.longread-document-wrapper-left .longread-document-date {
   text-align: right;
-}
-
-.longread-document-wrapper-left .longread-document {
-  margin-left: -110px;
 }
 
 /* Блок "справка" */
@@ -1076,5 +1063,3 @@ a:not([href]) {
   height: 3px;
   background-color: #fe4817;
 }
-
-
